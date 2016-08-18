@@ -8,3 +8,57 @@
 //------------------------------
 //
 //------------------------------
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.dual-panel{
+    // Block styles
+    width: 100%;
+    height: 50%;
+
+    color: darken($default-text-color, 5%);
+    font-size: 2.1em;
+    text-align: center;
+
+    &:hover{
+        color: $default-text-color;
+    }
+
+    // Modifiers
+    &--up{
+        background-color: $default-search;
+
+        &:hover{
+            background-color: $default-search-lighten;
+        }
+    }
+
+    &--down{
+        background-color: $default-random-quote;
+
+        &:hover{
+            background-color: $default-random-quote-lighten;
+        }
+    }
+
+    &--active{
+        height: 100%;
+        transition: height 1s ease-in-out;
+
+        background-color: $default-search-lighten;
+
+        color: $default-text-color;
+    }
+
+    // Elements
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -4,9 +4,19 @@
         <meta charset="utf-8">
         <title>Wikipedia viewer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
+        <div class="dual-panel dual-panel--up">
+            <a href="#" title="Search Wikipedia" class="dual-panel__link">Search Wikipedia</a>
+        </div>
+        <div class="dual-panel dual-panel--down">
+            <a href="https://en.wikipedia.org/wiki/Special:Random" title="Random Wikipedia Article" class="dual-panel__link">Random Wikipedia Article</a>
+        </div>
 
+        <!-- JS -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

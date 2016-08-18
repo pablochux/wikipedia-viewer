@@ -46,9 +46,12 @@ body{
 //------------------------------
 // Colour Variables
 //------------------------------
-// $main-text-color: ;
+$default-text-color: #FFF;
 // $main-bg-color: ;
-
+$default-search: #0082CA;
+$default-search-lighten: lighten($default-search, 10%);
+$default-random-quote: #D50058;
+$default-random-quote-lighten: lighten($default-random-quote, 10%);
 //------------------------------
 // URLS Variables
 //------------------------------
