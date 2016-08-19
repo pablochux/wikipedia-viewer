@@ -6,7 +6,7 @@
 @import 'animations';
 
 //------------------------------
-//
+// Home
 //------------------------------
 html,
 body{
@@ -46,11 +46,15 @@ body{
 
     &--active{
         height: 100%;
-        transition: height 1s ease-in-out;
 
-        background-color: $default-search-lighten;
+        transition: 1s ease-in-out;
+        background-color: $default-text-color;
 
-        color: $default-text-color;
+        color: #000; // FIX
+
+        &:hover{
+            background-color: $default-text-color;
+        }
     }
 
     // Elements

@@ -126,9 +126,11 @@ body {
       background-color: #ff096f; }
   .dual-panel--active {
     height: 100%;
-    transition: height 1s ease-in-out;
-    background-color: #00a3fd;
-    color: #FFF; }
+    transition: 1s ease-in-out;
+    background-color: #FFF;
+    color: #000; }
+    .dual-panel--active:hover {
+      background-color: #FFF; }
   .dual-panel__link {
     display: flex;
     align-items: center;
