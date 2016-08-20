@@ -156,3 +156,55 @@ body{
         }
     }
 }
+
+.search-result{
+    display: none;
+    width: 100%;
+
+    &-item{
+        @include card(3);
+
+        width: 90%;
+        height: 100px;
+
+        margin: 20px auto;
+        padding: 15px;
+        padding-left: 20px;
+
+        transition: box-shadow 250ms 3.38295ms;
+
+        background-color: $default-text-color;
+
+        color: #000;
+
+        &:hover{
+            @include card(5);
+        }
+
+        &--random-article{
+            height: auto;
+            padding: 20px;
+
+            background-color: $default-random-quote;
+
+            color: $default-text-color;
+
+            &:hover{
+                background-color: $default-random-quote-lighten;
+            }
+
+            // Elements
+            &__link{
+                font-size: 1.7em;
+                font-weight: 100;
+            }
+        }
+
+        // Elements
+        &__title{
+            padding-bottom: 10px;
+
+            font-weight: 100;
+        }
+    }
+}
