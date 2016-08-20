@@ -27,7 +27,11 @@ body{
 
     // Modifiers
     &--up{
-        background-color: $default-search;
+        background-color: $default-search-lighten;
+
+        @media screen and (min-width: 1024px) {
+            background-color: $default-search;
+        }
 
         &:hover{
             background-color: $default-search-lighten;
@@ -35,7 +39,11 @@ body{
     }
 
     &--down{
-        background-color: $default-random-quote;
+        background-color: $default-random-quote-lighten;
+
+        @media screen and (min-width: 1024px) {
+            background-color: $default-random-quote;
+        }
 
         &:hover{
             background-color: $default-random-quote-lighten;
