@@ -85,28 +85,30 @@ body{
 
 .search-form{
     // Element styles
-    width: 500px;
-    height: 45px;
+    width: 290px;
+    height: 40px;
 
-    transition: 1s ease-in-out, opacity 500ms ease-in-out;
+    transition: 1s ease-in-out,
+                opacity 500ms ease-in-out;
 
     opacity: 1;
 
+    @media screen and (min-width: 425px){
+        width: 400px;
+    }
+    @media screen and (min-width: 768px){
+        width: 500px;
+        height: 45px;
+    }
     // Modifiers
     // Default --hide, then remove. -> Clean animation for the appearing
     &--hide{
         opacity: 0;
     }
 
-    // Animation when a search is perfomed -> search-form goes to the top of the page, leaving space for the results
-    &--up{
-        width: 600px;
-        transform: translateY(-450px);
-    }
-
     // Elements
     &__input{
-        width: calc(100% - 45px);
+        width: calc(100% - 40px);
         height: 100%;
         padding: 2px 9px 0;
         float: left;
@@ -125,6 +127,12 @@ body{
             border: 1px solid #4E90FE;
             border-right: none;
         }
+
+        @media screen and (min-width: 768px){
+            width: calc(100% - 45px);
+
+            font-size: 22px;
+        }
     }
 
     &__icon{
@@ -132,7 +140,7 @@ body{
         align-items: center;
         justify-content: center;
 
-        width: 45px;
+        width: 40px;
         height: 100%;
         float: left;
 
@@ -146,9 +154,18 @@ body{
             background-color: #4285F4;
         }
 
+        @media screen and (min-width: 768px){
+            width: 45px;
+        }
+
         & svg{
-            width: 25px;
-            height: 25px;;
+            width: 22px;
+            height: 22px;
+
+            @media screen and (min-width: 768px){
+                width: 25px;
+                height: 25px;
+            }
         }
 
         & path{
