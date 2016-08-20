@@ -94,3 +94,10 @@ img {
     height: auto;
     border: none;
 }
+
+// -----------
+// Propios
+// -----------
+input{
+    border-radius: 0; // Safari fix
+}
