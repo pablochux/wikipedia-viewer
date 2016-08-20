@@ -6,7 +6,7 @@
 @import 'animations';
 
 //------------------------------
-// Home
+// Home -> Dual Panel selection
 //------------------------------
 html,
 body{
@@ -20,8 +20,6 @@ body{
     height: 50%;
 
     color: darken($default-text-color, 5%);
-    font-size: 2.1em;
-    text-align: center;
 
     &:hover{
         color: $default-text-color;
@@ -64,5 +62,143 @@ body{
         justify-content: center;
         width: 100%;
         height: 100%;
+
+        font-size: 2.1em;
+    }
+}
+
+//------------------------------
+// Search
+//------------------------------
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    &--hide{
+        display: none;
+    }
+}
+
+.search-form{
+    width: 500px;
+    height: 45px;
+
+    transition: 1s ease-in-out, opacity 250ms ease-in-out;
+
+    opacity: 1;
+
+
+    // Default --hide, then remove
+    &--hide{
+        opacity: 0;
+    }
+
+    &__input{
+        width: calc(100% - 45px);
+        height: 100%;
+        padding: 2px 9px 0;
+        float: left;
+
+        border: 1px solid #D9D9D9;
+        border-right: none;
+
+        font-size: 20px;
+
+        &:hover{
+            border: 1px solid #B9B9B9;
+            border-right: none;
+        }
+
+        &:focus{
+            border: 1px solid #4E90FE;
+            border-right: none;
+        }
+    }
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 45px;
+        height: 100%;
+        float: left;
+
+        background-color: #3B78E7;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:focus{
+            background-color: #4285F4;
+        }
+
+        & svg{
+            width: 25px;
+            height: 25px;;
+        }
+
+        & path{
+            fill: $default-text-color;
+        }
+    }
+    // Test
+    .animation{
+        width: 500px;
+        height: 50px;
+        transform: translateY(-450px);
+    }
+    // Test
+}
+
+.search-result{
+    display: none;
+    width: 100%;
+
+    &-item{
+        @include card(3);
+
+        width: 90%;
+        height: 100px;
+        margin: 20px auto;
+        padding: 15px;
+        padding-left: 20px;
+
+        transition: box-shadow 250ms 3.38295ms;
+        background-color: $default-text-color;
+
+        color: #000;
+
+        &:hover{
+            @include card(5);
+        }
+
+        // Elements
+        &__title{
+            font-weight: 100;
+            padding-bottom: 10px;
+        }
+
+        &_body{
+
+        }
+    }
+}
+.random-article{
+    @extend .u-margin-center;
+
+    width: 30%;
+    height: 50px;
+
+    &__link{
+        width: 100%;
+        height: 100%;
+
+        background-color: blue;
     }
 }
