@@ -50,8 +50,7 @@ ul {
   margin: 0;
   padding: 0; }
 
-main,
-li {
+main {
   display: block; }
 
 h1 {
@@ -106,6 +105,10 @@ img {
 
 input {
   border-radius: 0; }
+
+ul,
+ul > li {
+  display: inline-block; }
 
 * {
   box-sizing: border-box; }
@@ -132,8 +135,7 @@ ul {
   margin: 0;
   padding: 0; }
 
-main,
-li {
+main {
   display: block; }
 
 h1 {
@@ -188,6 +190,10 @@ img {
 
 input {
   border-radius: 0; }
+
+ul,
+ul > li {
+  display: inline-block; }
 
 .u-clear-fix {
   clear: both; }
@@ -361,3 +367,22 @@ body {
     padding-bottom: 10px;
     font-size: 1.7em;
     font-weight: inherit; }
+
+.footer {
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  background-color: #000; }
+  .footer__text {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.social {
+  float: right; }
+  .social__item:not(:last-child) {
+    margin-right: 15px; }
+  .social__link--github {
+    position: relative;
+    top: 1px; }

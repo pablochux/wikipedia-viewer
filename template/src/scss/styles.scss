@@ -252,3 +252,37 @@ body{
         }
     }
 }
+
+.footer{
+    // Block styles
+    width: 100%;
+    height: 70px;
+
+    padding: 20px;
+
+    background-color: #000;
+    // Modifiers
+
+    // Elements
+    &__text{
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.social{
+    // Block styles
+    float: right;
+
+    // Elements
+    &__item:not(:last-child){
+        margin-right: 15px;
+    }
+
+    &__link--github{
+        position: relative;
+        top: 1px;
+    }
+}

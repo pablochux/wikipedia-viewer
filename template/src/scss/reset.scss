@@ -27,8 +27,7 @@ ul {
     padding: 0;
 }
 
-main,
-li {
+main{
     display: block;
 }
 
@@ -100,4 +99,9 @@ img {
 // -----------
 input{
     border-radius: 0; // Safari fix
+}
+
+ul,
+ul>li{
+    display: inline-block;
 }
