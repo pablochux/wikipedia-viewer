@@ -137,6 +137,7 @@ body{
 
         border: 1px solid #D9D9D9;
         border-right: none;
+        border-radius: 3px 0 0 3px;
 
         font-size: 20px;
 
@@ -165,6 +166,8 @@ body{
         width: 40px;
         height: 100%;
         float: left;
+
+        border-radius: 0 3px 3px 0;
 
         background-color: #3B78E7;
 
@@ -197,14 +200,11 @@ body{
 }
 
 .search-result{
-    display: none;
     width: 100%;
 
     &-item{
-        @include card(3);
-
         width: 90%;
-        height: 100px;
+        height: auto;
 
         margin: 20px auto;
         padding: 15px;
@@ -216,24 +216,30 @@ body{
 
         color: #000;
 
-        &:hover{
-            @include card(5);
-        }
-
         &--random-article{
-            display: block;
-            height: auto;
+            @include card(2);
 
-            padding: 20px;
+            display: block;
+            width: 90%;
+
+            margin: 50px auto;// FIX
+            padding: 10px;
+
+            border-radius: 3px;
 
             background-color: $default-random-quote;
 
             color: $default-text-color;
-            font-size: 1.7em;
+            font-size: 1.4em;
             font-weight: 100;
 
             &:hover{
+                @include card(4);
                 background-color: $default-random-quote-lighten;
+            }
+
+            @media screen and (min-width: 768px){
+                font-size: 1.7em;
             }
         }
 
