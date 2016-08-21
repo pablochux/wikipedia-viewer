@@ -14,6 +14,6 @@ $(document).ready(function(){
     });
     // Search-form move up animation
     $('.search-form__icon').click(function() {
-        $('.search-form').addClass('search-form--up');
+        $('.search-form').addClass('search-form--expanded');
     });
 });

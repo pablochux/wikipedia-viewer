@@ -96,9 +96,11 @@ body{
     // Element styles
     width: 290px;
     height: 40px;
+    margin-top: 30px;
 
     transition: 1s ease-in-out,
-                opacity 500ms ease-in-out;
+                opacity 500ms ease-in-out,
+                width 500ms ease-in-out;
 
     opacity: 1;
 
@@ -109,11 +111,21 @@ body{
         width: 500px;
         height: 45px;
     }
+    @media screen and (min-width: 1024px){
+        margin-top: 50px;
+    }
 
     // Modifiers
     // Default --hide, then remove. -> Clean animation for the appearing
     &--hide{
         opacity: 0;
+    }
+
+    // Animation when a search is perfomed -> search-form goes to the top of the page, leaving space for the results
+    &--expanded{
+        @media screen and (min-width: 768px){
+            width: 600px;
+        }
     }
 
     // Elements

@@ -104,6 +104,9 @@ img {
   height: auto;
   border: none; }
 
+input {
+  border-radius: 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -183,6 +186,9 @@ img {
   height: auto;
   border: none; }
 
+input {
+  border-radius: 0; }
+
 .u-clear-fix {
   clear: both; }
 
@@ -221,11 +227,17 @@ body {
   .dual-panel:hover {
     color: #FFF; }
   .dual-panel--up {
-    background-color: #0082CA; }
+    background-color: #00a3fd; }
+    @media screen and (min-width: 1024px) {
+      .dual-panel--up {
+        background-color: #0082CA; } }
     .dual-panel--up:hover {
       background-color: #00a3fd; }
   .dual-panel--down {
-    background-color: #D50058; }
+    background-color: #ff096f; }
+    @media screen and (min-width: 1024px) {
+      .dual-panel--down {
+        background-color: #D50058; } }
     .dual-panel--down:hover {
       background-color: #ff096f; }
   .dual-panel--active {
@@ -245,6 +257,7 @@ body {
 
 .search {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -255,7 +268,8 @@ body {
 .search-form {
   width: 290px;
   height: 40px;
-  transition: 1s ease-in-out, opacity 500ms ease-in-out;
+  margin-top: 30px;
+  transition: 1s ease-in-out, opacity 500ms ease-in-out, width 500ms ease-in-out;
   opacity: 1; }
   @media screen and (min-width: 425px) {
     .search-form {
@@ -264,8 +278,14 @@ body {
     .search-form {
       width: 500px;
       height: 45px; } }
+  @media screen and (min-width: 1024px) {
+    .search-form {
+      margin-top: 50px; } }
   .search-form--hide {
     opacity: 0; }
+  @media screen and (min-width: 768px) {
+    .search-form--expanded {
+      width: 600px; } }
   .search-form__input {
     width: calc(100% - 40px);
     height: 100%;
@@ -325,15 +345,15 @@ body {
     .search-result-item:hover {
       box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3); }
     .search-result-item--random-article {
+      display: block;
       height: auto;
       padding: 20px;
       background-color: #D50058;
-      color: #FFF; }
+      color: #FFF;
+      font-size: 1.7em;
+      font-weight: 100; }
       .search-result-item--random-article:hover {
         background-color: #ff096f; }
-      .search-result-item--random-article__link {
-        font-size: 1.7em;
-        font-weight: 100; }
     .search-result-item__title {
       padding-bottom: 10px;
       font-weight: 100; }
