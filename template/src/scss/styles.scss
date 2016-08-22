@@ -211,6 +211,8 @@ body{
 
         transition: box-shadow 250ms 3.38295ms;
 
+        animation: fadeInFromNone 500ms ease-in-out;
+
         background-color: $default-text-color;
 
         color: #000;

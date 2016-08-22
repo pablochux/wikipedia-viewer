@@ -364,6 +364,7 @@ body {
   height: auto;
   margin: 30px auto;
   transition: box-shadow 250ms 3.38295ms;
+  animation: fadeInFromNone 500ms ease-in-out;
   background-color: #FFF;
   color: #000;
   font-weight: 100; }
