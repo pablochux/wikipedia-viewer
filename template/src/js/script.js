@@ -50,7 +50,8 @@ $(document).ready(function(){
         setTimeout(function () {
             $('.dual-panel__link').hide();
             $('.dual-panel--down').hide();
-            $('.search').removeClass('search--hide');
+            $('.search').removeClass('u-hide');
+            $('.footer').removeClass('u-hide');
             setTimeout(function () {
                 $('.search-form').removeClass('search-form--hide');
                 $('.search-form__input').select();
