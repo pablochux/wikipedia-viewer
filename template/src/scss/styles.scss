@@ -19,13 +19,14 @@ body{
     width: 100%;
     height: 50%;
 
-    cursor: pointer;
 
     // Modifiers
     &--search{
         @include lighten-hover-color($default-text-color);
 
         background-color: $default-search-lighten;
+
+        cursor: pointer;
 
         @media screen and (min-width: 1024px) {
             background-color: $default-search;
@@ -40,6 +41,8 @@ body{
         @include lighten-hover-color($default-text-color);
 
         background-color: $default-random-quote-lighten;
+
+        cursor: pointer;
 
         @media screen and (min-width: 1024px) {
             background-color: $default-random-quote;
@@ -280,17 +283,14 @@ body{
 }
 
 .search-error{
-    display: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
 
-    // Modifiers
-    &--active{
-        animation: fadeInFromNone 500ms ease-in-out;
-    }
+    animation: fadeInFromNone 500ms ease-in-out;
 
     // Elements
     &__header{
-        margin-top: 100px;
-        margin-bottom: 100px;
+        padding-bottom: 10px;
 
         color: #000;
         font-weight: 100;
