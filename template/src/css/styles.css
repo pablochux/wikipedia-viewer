@@ -318,6 +318,7 @@ body {
     height: 100%;
     padding: 2px 9px 0;
     float: left;
+    transition: border 250ms ease-in-out;
     border: 1px solid #D9D9D9;
     border-right: none;
     border-radius: 3px 0 0 3px;
@@ -333,6 +334,9 @@ body {
       .search-form__input {
         width: calc(100% - 45px);
         font-size: 22px; } }
+    .search-form__input--empty {
+      border: 1px solid #FF1E1E;
+      border-right: none; }
   .search-form__icon {
     display: flex;
     align-items: center;
@@ -364,10 +368,10 @@ body {
   height: auto;
   margin: 30px auto;
   transition: box-shadow 250ms 3.38295ms;
-  animation: fadeInFromNone 500ms ease-in-out;
   background-color: #FFF;
   color: #000;
-  font-weight: 100; }
+  font-weight: 100;
+  animation: fadeInFromNone 500ms ease-in-out; }
   .search-result-item--random-article {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
     display: block;
