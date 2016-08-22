@@ -57,8 +57,17 @@ $default-random-quote-lighten: lighten($default-random-quote, 10%);
 //------------------------------
 $img: '../img';
 
-
 // Mixins
+//------------------------------
+//	lighten-hover-color
+//------------------------------
+@mixin lighten-hover-color($color) {
+	color: darken($color, 5%);
+
+	&:hover{
+		color: $color;
+	}
+}
 /// Gives a card depth effect.
 /// @param {Number} $depth - depth level (between 1 and 5)
 /// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design

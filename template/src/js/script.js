@@ -44,14 +44,16 @@ function removeArticles() {
 // Main script
 // -------------------
 $(document).ready(function(){
-    $('.dual-panel--up').click(function() {
+    $('.dual-panel--search').click(function() {
         $(this).addClass('dual-panel--active');
+        $('.dual-panel--search').removeClass('dual-panel--search');
         // 1sec -> when the height animation is completed
         setTimeout(function () {
             $('.dual-panel__link').hide();
-            $('.dual-panel--down').hide();
-            $('.search').removeClass('u-hide');
-            $('.footer').removeClass('u-hide');
+            $('.dual-panel--random-article').hide();
+            $('.search').removeClass('search--hide');
+            $('.footer').removeClass('footer--hide');
+            console.log(this);
             setTimeout(function () {
                 $('.search-form').removeClass('search-form--hide');
                 $('.search-form__input').select();

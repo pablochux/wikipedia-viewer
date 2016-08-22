@@ -250,36 +250,40 @@ body {
 .dual-panel {
   width: 100%;
   height: 50%;
-  color: #f2f2f2; }
-  .dual-panel:hover {
-    color: #FFF; }
-  .dual-panel--up {
+  cursor: pointer; }
+  .dual-panel--search {
+    color: #f2f2f2;
     background-color: #00a3fd; }
+    .dual-panel--search:hover {
+      color: #FFF; }
     @media screen and (min-width: 1024px) {
-      .dual-panel--up {
+      .dual-panel--search {
         background-color: #0082CA; } }
-    .dual-panel--up:hover {
+    .dual-panel--search:hover {
       background-color: #00a3fd; }
-  .dual-panel--down {
+  .dual-panel--random-article {
+    color: #f2f2f2;
     background-color: #ff096f; }
+    .dual-panel--random-article:hover {
+      color: #FFF; }
     @media screen and (min-width: 1024px) {
-      .dual-panel--down {
+      .dual-panel--random-article {
         background-color: #D50058; } }
-    .dual-panel--down:hover {
+    .dual-panel--random-article:hover {
       background-color: #ff096f; }
   .dual-panel--active {
     height: 100%;
-    transition: 1s ease-in-out;
-    background-color: #FFF;
-    color: #000; }
-    .dual-panel--active:hover {
-      background-color: #FFF; }
+    transition: height 1s ease-in-out, background-color 1s ease-in-out;
+    background-color: #FFF; }
+  .dual-panel--hide {
+    display: none; }
   .dual-panel__link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    color: #FFF;
     font-size: 2.1em; }
 
 .search {
@@ -369,14 +373,17 @@ body {
       fill: #FFF; }
 
 .search-result-item {
-  width: 90%;
+  width: 80%;
   height: auto;
-  margin: 30px auto;
+  margin: 30px auto 50px;
   transition: box-shadow 250ms 3.38295ms;
   background-color: #FFF;
   color: #000;
   font-weight: 100;
   animation: fadeInFromNone 500ms ease-in-out; }
+  @media screen and (min-width: 1024px) {
+    .search-result-item {
+      width: 90%; } }
   .search-result-item--random-article {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
     display: block;
@@ -412,14 +419,17 @@ body {
 .footer {
   width: 100%;
   height: 70px;
-  padding: 20px;
+  padding: 20px 5%;
   background-color: #000;
   animation: fadeInFromNone 500ms ease-in-out; }
+  .footer--hide {
+    display: none; }
   .footer__text {
     display: inline-block;
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    color: #FFF; }
 
 .social {
   float: right; }
