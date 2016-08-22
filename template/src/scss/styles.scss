@@ -253,6 +253,24 @@ body{
     }
 }
 
+.search-error{
+    display: none;
+
+    // Modifiers
+    &--active{
+        animation: fadeInFromNone 500ms ease-in-out;
+    }
+
+    // Elements
+    &__header{
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        color: #000;
+        font-weight: 100;
+    }
+}
+
 .footer{
     // Block styles
     width: 100%;

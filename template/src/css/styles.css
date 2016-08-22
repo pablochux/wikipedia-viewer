@@ -1,3 +1,13 @@
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
 
 .u-clear-fix {
   clear: both; }
@@ -220,6 +230,17 @@ ul > li {
 
 .u-full-width {
   width: 100%; }
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
 
 html,
 body {
@@ -367,6 +388,16 @@ body {
     padding-bottom: 10px;
     font-size: 1.7em;
     font-weight: inherit; }
+
+.search-error {
+  display: none; }
+  .search-error--active {
+    animation: fadeInFromNone 500ms ease-in-out; }
+  .search-error__header {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #000;
+    font-weight: 100; }
 
 .footer {
   width: 100%;
