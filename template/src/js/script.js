@@ -25,7 +25,6 @@ function wikipediaApiSearch(search){
             $('.footer').removeClass('footer--hide');
         },
         error: function(data){
-            console.log(data);
             displaySearchError('The search could not be perfomed. </h1><h3 class="search-error__header">Please, try again in a few moments...</h3>');
         }
     });
