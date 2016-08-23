@@ -5,7 +5,7 @@ function displaySearchError(text) {
     $('.search-result').append('<div class="search-error u-center"><h1 class="search-error__header">' + text + '</h1></div>');
 }
 function wikipediaApiSearch(search){
-    var api = "http://en.wkkikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=";
+    var api = "http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=";
     $.ajax({
         type: "GET",
         url: api + search + "&callback=?",
