@@ -18,11 +18,11 @@ function wikipediaApiSearch(search){
             console.log('Test');
             if (typeof data.query == 'object') {
                 displayArticles(data);
-                $('.footer').removeClass('footer--hide');
             }else{
                 console.log('NOTHING');
                 displaySearchError('The search did not provide any results.');
             }
+            $('.footer').removeClass('footer--hide');
         },
         error: function(data){
             console.log(data);

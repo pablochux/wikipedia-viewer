@@ -76,7 +76,7 @@ body{
         height: 100%;
 
         color: $default-text-color;
-        font-size: 2.1em;
+        font-size: calc(2.1em + 1vw);
     }
 }
 
@@ -284,8 +284,9 @@ body{
 }
 
 .search-error{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    max-width: 100%;
+
+    margin: 100px auto;
 
     animation: fadeInFromNone 500ms ease-in-out;
 
@@ -294,6 +295,7 @@ body{
         padding-bottom: 10px;
 
         color: #000;
+        font-size: calc(1.3em + 1vw);
         font-weight: 100;
     }
 }
@@ -322,6 +324,10 @@ body{
         transform: translateY(-50%);
 
         color: $default-text-color;
+
+        &--link{
+            font-style: italic;
+        }
     }
 }
 
