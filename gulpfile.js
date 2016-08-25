@@ -39,12 +39,9 @@ gulp.task('default', function(){
 });
 
 // Compile the sass files into css files
-// Problema: por defecto se compilan todos los archivos en distintos archivos por lo que hay ficheros que se quedan en src/css (animaciones, default, etc)
-// Problema no resuelto, se siguen duplicando las cosas. Porque al hacer import se imortan toda las cosas pero luego al hacer el concat, se concatenan todas de nuevo.
 gulp.task("sass", function() {
-    gulp.src(src + "scss/*.scss")
+    gulp.src(src + "scss/styles.scss")
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('styles.css')) // this is what was missing
     .pipe(gulp.dest(src + 'css/')); // output to theme root
 });
 // Minify css
