@@ -103,19 +103,11 @@ $(document).ready(function() {
 
     /*
      *   The search will be perfomed when the user stops typing
+     *   When keyup (suelta la tecla) -> empieza el cronometro para ver si pasan los segundos (si pasan, se hace la búsqueda en wikipedia)
+     *   Pero si vuelve a presionar una tecla (keydown) -> se reinicia el cronometro y no se hace una búsqueda
      *   The click in the icon or the enter key is not needed.
      *
-     *
      */
-    // Experiment
-    search_icon.click(function() {
-        performWikiSearch(search_input.val());
-    });
-    // End Experiment
-
-    // Experiment
-    // When keyup (suelta la tecla) -> empieza el cronometro para ver si pasan los segundos (si pasan, se hace la búsqueda en wikipedia)
-    // Pero si vuelve a presionar una tecla (keydown) -> se reinicia el cronometro y no se hace una búsqueda
 
     search_input.keyup(function() {
         // Expand the search-form after a key is pressed
@@ -144,5 +136,4 @@ $(document).ready(function() {
         doneTypping = false;
         clearTimeout(keyTimeout);
     });
-    // End Experiment
 });
