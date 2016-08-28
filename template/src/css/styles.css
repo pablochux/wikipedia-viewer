@@ -251,40 +251,48 @@ body {
     .search-form__icon path {
       fill: #FFF; }
 
-.search-result-item {
-  width: 80%;
-  height: auto;
-  margin: 30px auto 50px;
-  transition: box-shadow 250ms 3.38295ms;
-  background-color: #FFF;
-  color: #000;
-  font-weight: 100;
-  animation: fadeInFromNone 500ms ease-in-out; }
-  @media screen and (min-width: 1024px) {
-    .search-result-item {
+.search-result {
+  width: 100%; }
+  @media screen and (min-width: 1200px) {
+    .search-result {
       width: 90%; } }
-  .search-result-item--random-article {
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
-    display: block;
-    width: 90%;
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 10px;
-    border-radius: 3px;
-    background-color: #D50058;
-    color: #FFF;
-    font-size: 1.4em;
-    font-weight: 100; }
-    .search-result-item--random-article:hover {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
-      background-color: #ff096f; }
-    @media screen and (min-width: 768px) {
-      .search-result-item--random-article {
-        font-size: 1.7em; } }
-  .search-result-item__title {
-    padding-bottom: 10px;
-    font-size: 1.7em;
-    font-weight: inherit; }
+  @media screen and (min-width: 1500px) {
+    .search-result {
+      width: 80%; } }
+  .search-result-item {
+    width: 80%;
+    height: auto;
+    margin: 30px auto 50px;
+    transition: box-shadow 250ms 3.38295ms;
+    background-color: #FFF;
+    color: #000;
+    font-weight: 100;
+    animation: fadeInFromNone 500ms ease-in-out; }
+    @media screen and (min-width: 1024px) {
+      .search-result-item {
+        width: 90%; } }
+    .search-result-item--random-article {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+      display: block;
+      width: 90%;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 10px;
+      border-radius: 3px;
+      background-color: #D50058;
+      color: #FFF;
+      font-size: 1.4em;
+      font-weight: 100; }
+      .search-result-item--random-article:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+        background-color: #ff096f; }
+      @media screen and (min-width: 768px) {
+        .search-result-item--random-article {
+          font-size: 1.7em; } }
+    .search-result-item__title {
+      padding-bottom: 10px;
+      font-size: 1.7em;
+      font-weight: inherit; }
 
 .search-error {
   max-width: 100%;
