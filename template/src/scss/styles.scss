@@ -9,338 +9,354 @@
 // Home -> Dual Panel selection
 //------------------------------
 html,
-body{
-    width: 100%;
-    height: 100%;
+body {
+	width: 100%;
+	height: 100%;
 }
 
-.dual-panel{
-    // Block styles
-    width: 100%;
-    height: 50%;
+.dual-panel {
+	// Block styles
+	width: 100%;
+	height: 50%;
+
+	// Modifiers
+	&--search {
+		@include lighten-hover-color($default-text-color);
+
+		background-color: $default-search-lighten;
+
+		cursor: pointer;
 
 
-    // Modifiers
-    &--search{
-        @include lighten-hover-color($default-text-color);
+		@media screen and (min-width: 1024px) {
+			background-color: $default-search;
+		}
 
-        background-color: $default-search-lighten;
+		&:hover {
+			background-color: $default-search-lighten;
+		}
+	}
 
-        cursor: pointer;
+	&--random-article {
+		@include lighten-hover-color($default-text-color);
 
-        @media screen and (min-width: 1024px) {
-            background-color: $default-search;
-        }
+		background-color: $default-random-quote-lighten;
 
-        &:hover{
-            background-color: $default-search-lighten;
-        }
-    }
+		cursor: pointer;
 
-    &--random-article{
-        @include lighten-hover-color($default-text-color);
+		@media screen and (min-width: 1024px) {
+			background-color: $default-random-quote;
+		}
 
-        background-color: $default-random-quote-lighten;
+		&:hover {
+			background-color: $default-random-quote-lighten;
+		}
+	}
 
-        cursor: pointer;
+	&--active {
+		height: 100%;
 
-        @media screen and (min-width: 1024px) {
-            background-color: $default-random-quote;
-        }
+		transition: height 1s ease-in-out,
+					background-color 1s ease-in-out;
 
-        &:hover{
-            background-color: $default-random-quote-lighten;
-        }
-    }
+		background-color: $default-text-color;
+	}
 
-    &--active{
-        height: 100%;
+	&--hide {
+		display: none;
+	}
 
-        transition: height 1s ease-in-out,
-                    background-color 1s ease-in-out;
+	// Elements
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-        background-color: $default-text-color;
-    }
+		width: 100%;
+		height: 100%;
 
-    &--hide{
-        display: none;
-    }
-
-    // Elements
-    &__link{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-        height: 100%;
-
-        color: $default-text-color;
-        font-size: calc(2.1em + 1vw);
-    }
+		color: $default-text-color;
+		font-size: calc(2.1em + 1vw);
+	}
 }
 
 //------------------------------
 // Search
 //------------------------------
-.search{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+.search {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 
-    width: 100%;
-    min-height: 100%;
-    margin-bottom: -70px; // Equal to the footer
+	width: 100%;
 
-    &::after {
-        display: block;
+	min-height: 100%;
 
-        height: 70px;
+	margin-bottom: -70px; // Equal to the footer
 
-        content: '';
-    }
+	&::after {
+		display: block;
 
-    // Modifiers
-    &--hide{
-        display: none;
-    }
+		height: 70px;
+
+		content: '';
+	}
+
+	// Modifiers
+	&--hide {
+		display: none;
+	}
 }
 
-.search-form{
-    // Element styles
-    width: 290px;
-    height: 40px;
-    margin-top: 30px;
-    // margin-bottom: 30px; // Safari fix
+.search-form {
+	// Element styles
+	width: 290px;
+	height: 40px;
 
-    transition: 1s ease-in-out,
-                opacity 500ms ease-in-out,
-                width 500ms ease-in-out;
+	margin-top: 30px;
+	// margin-bottom: 30px; // Safari fix
 
-    opacity: 1;
+	transition: 1s ease-in-out,
+	opacity 500ms ease-in-out,
+	width 500ms ease-in-out;
 
-    @media screen and (min-width: 425px){
-        width: 400px;
-    }
-    @media screen and (min-width: 768px){
-        width: 500px;
-        height: 45px;
-    }
-    @media screen and (min-width: 1024px){
-        margin-top: 50px;
-    }
+	opacity: 1;
 
-    // Modifiers
-    // Default --hide, then remove. -> Clean animation for the appearing
-    &--hide{
-        opacity: 0;
-    }
+	@media screen and (min-width: 425px) {
+		width: 400px;
+	}
+	@media screen and (min-width: 768px) {
+		width: 500px;
+		height: 45px;
+	}
+	@media screen and (min-width: 1024px) {
+		margin-top: 50px;
+	}
 
-    // Animation when a search is perfomed -> search-form goes to the top of the page, leaving space for the results
-    &--expanded{
-        @media screen and (min-width: 768px){
-            width: 600px;
-        }
-    }
+	// Modifiers
+	// Default --hide, then remove. -> Clean animation for the appearing
+	&--hide {
+		opacity: 0;
+	}
 
-    // Elements
-    &__input{
-        width: calc(100% - 40px);
-        height: 100%;
-        padding: 2px 9px 0;
-        float: left;
+	// Animation when a search is perfomed -> search-form goes to the top of the page, leaving space for the results
+	&--expanded {
+		@media screen and (min-width: 768px) {
+			width: 600px;
+		}
+	}
 
-        transition: border 250ms ease-in-out;
+	// Elements
+	&__input {
+		width: calc(100% - 40px);
+		height: 100%;
 
-        border: 1px solid #D9D9D9;
-        border-right: none;
-        border-radius: 3px 0 0 3px;
+		padding: 2px 9px 0;
 
-        font-size: 20px;
-        font-weight: 300;
+		float: left;
 
-        &:hover{
-            border: 1px solid #B9B9B9;
-            border-right: none;
-        }
+		transition: border 250ms ease-in-out;
 
-        &:focus{
-            border: 1px solid #4E90FE;
-            border-right: none;
-        }
+		border: 1px solid #D9D9D9;
+		border-right: none;
+		border-radius: 3px 0 0 3px;
 
-        @media screen and (min-width: 768px){
-            width: calc(100% - 45px);
+		font-size: 20px;
+		font-weight: 300;
 
-            font-size: 22px;
-        }
+		&:hover {
+			border: 1px solid #B9B9B9;
+			border-right: none;
+		}
 
-        // Modifiers
-        &--empty{
-            border: 1px solid #FF1E1E;
-            border-right: none;
-        }
-    }
+		&:focus {
+			border: 1px solid #4E90FE;
+			border-right: none;
+		}
 
-    &__icon{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+		@media screen and (min-width: 768px) {
+			width: calc(100% - 45px);
 
-        width: 40px;
-        height: 100%;
-        float: left;
+			font-size: 22px;
+		}
 
-        border-radius: 0 3px 3px 0;
+		// Modifiers
+		&--empty {
+			border: 1px solid #FF1E1E;
+			border-right: none;
+		}
+	}
 
-        background-color: #3B78E7;
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-        &:hover{
-            cursor: pointer;
-        }
+		width: 40px;
+		height: 100%;
 
-        &:focus{
-            background-color: #4285F4;
-        }
+		float: left;
 
-        @media screen and (min-width: 768px){
-            width: 45px;
-        }
+		border-radius: 0 3px 3px 0;
 
-        & svg{
-            width: 22px;
-            height: 22px;
+		background-color: #3B78E7;
 
-            @media screen and (min-width: 768px){
-                width: 25px;
-                height: 25px;
-            }
-        }
+		&:hover {
+			cursor: pointer;
+		}
 
-        & path{
-            fill: $default-text-color;
-        }
-    }
+		&:focus {
+			background-color: #4285F4;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 45px;
+		}
+
+		& svg {
+			width: 22px;
+			height: 22px;
+
+			@media screen and (min-width: 768px) {
+				width: 25px;
+				height: 25px;
+			}
+		}
+
+		& path {
+			fill: $default-text-color;
+		}
+	}
 }
 
-.search-result{
-    &-item{
-        width: 80%;
-        height: auto;
+.search-result {
+	width: 100%;
 
-        margin: 30px auto 50px;
+	@media screen and (min-width: 1200px) {
+		width: 90%;
+	}
 
-        transition: box-shadow 250ms 3.38295ms;
+	@media screen and (min-width: 1500px) {
+		width: 80%;
+	}
 
-        background-color: $default-text-color;
+	&-item {
+		width: 80%;
+		height: auto;
 
-        color: #000;
-        font-weight: 100;
+		margin: 30px auto 50px;
 
-        animation: fadeInFromNone 500ms ease-in-out;
+		transition: box-shadow 250ms 3.38295ms;
 
-        @media screen and (min-width: 1024px){
-            width: 90%;
-        }
+		background-color: $default-text-color;
 
-        // Modifiers
-        &--random-article{
-            @include card(2);
+		color: #000;
+		font-weight: 100;
 
-            display: block;
-            width: 90%;
-            max-width: 500px;
+		animation: fadeInFromNone 500ms ease-in-out;
 
-            margin: 50px auto;// FIX
-            padding: 10px;
+		@media screen and (min-width: 1024px) {
+			width: 90%;
+		}
 
-            border-radius: 3px;
+		// Modifiers
+		&--random-article {
+			@include card(2);
 
-            background-color: $default-random-quote;
+			display: block;
 
-            color: $default-text-color;
-            font-size: 1.4em;
-            font-weight: 100;
+			width: 90%;
+			max-width: 500px;
 
-            &:hover{
-                @include card(4);
-                background-color: $default-random-quote-lighten;
-            }
+			margin: 50px auto;// FIX
+			padding: 10px;
 
-            @media screen and (min-width: 768px){
-                font-size: 1.7em;
-            }
-        }
+			border-radius: 3px;
 
-        // Elements
-        &__title{
-            padding-bottom: 10px;
+			background-color: $default-random-quote;
 
-            font-size: 1.7em;
-            font-weight: inherit;
-        }
-    }
+			color: $default-text-color;
+			font-size: 1.4em;
+			font-weight: 100;
+
+			&:hover {
+				@include card(4);
+
+				background-color: $default-random-quote-lighten;
+			}
+
+			@media screen and (min-width: 768px) {
+				font-size: 1.7em;
+			}
+		}
+
+		// Elements
+		&__title {
+			padding-bottom: 10px;
+
+			font-size: 1.7em;
+			font-weight: inherit;
+		}
+	}
 }
 
-.search-error{
-    max-width: 100%;
+.search-error {
+	max-width: 100%;
 
-    margin: 100px auto;
+	margin: 100px auto;
 
-    animation: fadeInFromNone 500ms ease-in-out;
+	animation: fadeInFromNone 500ms ease-in-out;
 
-    // Elements
-    &__header{
-        padding-bottom: 10px;
+	// Elements
+	&__header {
+		padding-bottom: 10px;
 
-        color: #000;
-        font-size: calc(1.3em + 1vw);
-        font-weight: 100;
-    }
+		color: #000;
+		font-size: calc(1.3em + 1vw);
+		font-weight: 100;
+	}
 }
 
-.footer{
-    // Block styles
-    width: 100%;
-    height: 70px;
+.footer {
+	// Block styles
+	width: 100%;
+	height: 70px;
 
-    padding: 20px 5%;
+	padding: 20px 5%;
 
-    background-color: #000;
+	background-color: #000;
+	line-height: 30px;
 
-    line-height: 30px;
+	animation: fadeInFromNone 500ms ease-in-out;
 
-    animation: fadeInFromNone 500ms ease-in-out;
+	// Modifiers
+	&--hide {
+		display: none;
+	}
 
-    // Modifiers
-    &--hide{
-        display: none;
-    }
+	// Elements
+	&__text {
+		display: inline-block;
+		color: $default-text-color;
 
-    // Elements
-    &__text{
-        display: inline-block;
-
-        color: $default-text-color;
-
-        &--link{
-            font-style: italic;
-        }
-    }
+		&--link {
+			font-style: italic;
+		}
+	}
 }
 
-.social{
-    // Block styles
-    float: right;
+.social {
+	// Block styles
+	float: right;
 
-    // Elements
-    &__item:not(:last-child){
-        margin-right: 15px;
-    }
+	// Elements
+	&__item:not(:last-child) {
+		margin-right: 15px;
+	}
 
-    &__link--github{
-        position: relative;
-        top: 1px;
-    }
+	&__link--github {
+		position: relative;
+		top: 1px;
+	}
 }
