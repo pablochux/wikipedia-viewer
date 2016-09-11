@@ -40,3 +40,5 @@ Thumbs.db
 /node_modules
 # Bower componentes #
 /bower_components
+
+template/Icon
